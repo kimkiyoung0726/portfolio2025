@@ -30,11 +30,8 @@ a {
   font-weight: 700;
   font-size: 30px;
   line-height: 1.3;
-<<<<<<< HEAD
-=======
   /* 중앙배치 */
   text-align: center;
->>>>>>> e30074e (처음 커밋)
 }
 
 /* 부제목 */
@@ -43,11 +40,8 @@ a {
   font-weight: 500;
   line-height: 1.3;
   color: #119973;
-<<<<<<< HEAD
-=======
   /* 중앙배치 */
   text-align: center;
->>>>>>> e30074e (처음 커밋)
 }
 
 .logo {
@@ -364,10 +358,7 @@ header nav {
   margin-top: 50px;
   background: #fff;
   /* 내부여백 */
-  padding: 28px 50px;
-  /* 크기 */
-  height: 333px;
-  width: 482px;
+  padding: 2%;
 }
 
 .guid-list dt {
@@ -408,8 +399,6 @@ header nav {
   color: #fff;
   /* 여백 */
   text-align: center;
-  padding: 30px;
-  line-height: 2;
   background: #31554B;
 }
 
@@ -430,7 +419,6 @@ header nav {
   display: flex;
   /* width: 748px; */
   justify-content: space-between;
-  margin-top: 30px;
   flex-wrap: wrap;
 }
 
@@ -438,13 +426,11 @@ header nav {
   display: flex;
   /* width: 1215px; */
   justify-content: space-between;
-  margin-top: 30px;
   flex-wrap: wrap;
 }
 
 .address-3 {
   display: flex;
-  margin-top: 30px;
   flex-wrap: wrap;
 }
 
@@ -462,13 +448,6 @@ header nav {
 .eventpage,
 .portfolio-process{
   position: fixed;
-<<<<<<< HEAD
-  background:black;
-  color: #fff;
-  border-radius: 20px 20px 20px 20px;
-  text-align: center;
-  padding: 10px;
-=======
   background: linear-gradient(135deg, #119973, #1abc9c);
   color: #fff;
   border-radius: 25px;
@@ -481,7 +460,6 @@ header nav {
   border: 2px solid transparent;
   backdrop-filter: blur(10px);
   z-index: 1000;
->>>>>>> e30074e (처음 커밋)
 }
 
 .eventpage {
@@ -494,8 +472,6 @@ header nav {
   right: 30px;
 }
 
-<<<<<<< HEAD
-=======
 /* 호버 효과 */
 .eventpage:hover,
 .portfolio-process:hover {
@@ -511,7 +487,6 @@ header nav {
   box-shadow: 0 4px 15px rgba(17, 153, 115, 0.3);
 }
 
->>>>>>> e30074e (처음 커밋)
 /* ===== 반응형 미디어 쿼리 ===== */
 
 /* 태블릿 (768px ~ 1024px) */
@@ -837,15 +812,10 @@ header nav {
   }
   
   .tab-menu {
-<<<<<<< HEAD
-    flex-direction: column;
-    gap: 10px;
-=======
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
->>>>>>> e30074e (처음 커밋)
   }
   
   .tab-menu li {
@@ -974,15 +944,10 @@ header nav {
   .eventpage,
   .portfolio-process {
     right: 15px;
-<<<<<<< HEAD
-    padding: 8px;
-    font-size: 14px;
-=======
     padding: 10px 16px;
     font-size: 13px;
     border-radius: 20px;
     box-shadow: 0 3px 12px rgba(17, 153, 115, 0.3);
->>>>>>> e30074e (처음 커밋)
   }
   
   .eventpage {
@@ -1034,8 +999,6 @@ header nav {
     margin: 10px;
   }
   
-<<<<<<< HEAD
-=======
   .tab-menu {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1043,7 +1006,6 @@ header nav {
     justify-content: center;
   }
   
->>>>>>> e30074e (처음 커밋)
   .tab-menu li {
     padding: 8px 15px;
     font-size: 13px;
@@ -1127,15 +1089,10 @@ header nav {
   .eventpage,
   .portfolio-process {
     right: 10px;
-<<<<<<< HEAD
-    padding: 6px;
-    font-size: 12px;
-=======
     padding: 8px 14px;
     font-size: 11px;
     border-radius: 18px;
     box-shadow: 0 2px 10px rgba(17, 153, 115, 0.3);
->>>>>>> e30074e (처음 커밋)
   }
   
   .eventpage {
