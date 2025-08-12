@@ -74,13 +74,7 @@ a {
 }
 
 .item4 {
-  background: url("../img/DSA.jpg") no-repeat center center;
-  background-size: cover;
-}
-
-.item4:hover {
-  background: url("../img/DSA.jpg") no-repeat center center;
-  background-size: cover;
+   background: url("../img/Todo.png") no-repeat center center;
 }
 
 /* 포폴별 제목 */

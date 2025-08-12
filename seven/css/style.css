@@ -556,8 +556,8 @@ header nav {
   }
   
   .guid-list {
-    width: 400px;
-    height: 300px;
+    width: 40%;
+    height: auto;
     padding: 20px 30px;
   }
   
