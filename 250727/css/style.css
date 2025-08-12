@@ -1,0 +1,143 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Roboto:wght@400;700;900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px; /* 기준 폰트 사이즈 설정 */
+}
+
+body {
+  word-break: keep-all;
+  font: 1rem /1.5 "Kaushan Script", "Nanum Gothic", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 메인 */
+.portfolio-list {
+  /* 높이 */
+  height: 100vh; /* 화면 높이에 꽉 차게 */
+  display: flex;
+}
+
+.portfolio-list .portfolio-item {
+  position: relative;
+  /* 정지 너비 */
+  width: 31.25rem; /* 500px → 31.25rem */
+  height: 100%; /* 부모 높이에 꽉 차게 */
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: block; 
+  transition: width 0.8s ease, filter 0.8s ease; /* 더 천천히 부드러운 전환 효과 */
+}
+
+.portfolio-list .portfolio-item:hover {
+  /* 펼쳐졌을때 너비 */
+  width: 62.5rem; /* 1000px → 62.5rem */
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.item1 {
+  background: url("../img/seven-li-sum-2.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.item1:hover {
+  background: url("../img/seven-li-sum-hover.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.item2 {
+  background: url("../img/app-li-sim-1.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.item2:hover {
+  background: url("../img/app-li-sim-1-hover.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.item3 {
+  background: url("../img/taxi-li-sum-1.png") no-repeat center center;
+  background-size: cover;
+}
+
+.item3:hover {
+  background: url("../img/taxi-li-sum-hover.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.item4 {
+   background: url("../img/Todo.png") no-repeat center center;
+}
+
+/* 포폴별 제목 */
+.portfolio-list .portfolio-item p {
+  position: absolute;
+  bottom: 5%;
+  left: 35%;
+  font-weight: 800;
+  font-size: 1.375rem; /* 22px → 1.375rem */
+  color: #fff;
+  text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5); /* 가독성 향상 */
+}
+
+/*반응형 */
+/* tablet */
+@media screen and (max-width: 62.5rem) { /* 1000px → 62.5rem */
+  .portfolio-list {
+    height: 100vh; /* 화면 높이에 꽉 차게 */
+  }
+  
+  .portfolio-list .portfolio-item {
+    width: 25rem; /* 400px → 25rem */
+  }
+  
+  .portfolio-list .portfolio-item:hover {
+    width: 50rem; /* 800px → 50rem */
+  }
+  
+  /* 태블릿에서 제목 중앙 정렬 */
+  .portfolio-list .portfolio-item p {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 80%;
+    max-width: 20rem;
+  }
+}
+
+/*mobile*/
+@media screen and (max-width: 31.25rem) { /* 500px → 31.25rem */
+  .portfolio-list {
+    flex-direction: column;
+    height: 100vh; /* 뷰포트 높이 사용 */
+  }
+  
+  .portfolio-list .portfolio-item {
+    width: 100%;
+    height: 25vh; /* 뷰포트 높이의 25% */
+  }
+  
+  .portfolio-list .portfolio-item:hover {
+    width: 100%; /* 모바일에서는 전체 너비 유지 */
+  }
+  
+  /* 포폴별 제목 */
+  .portfolio-list .portfolio-item p {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 1.25rem; /* 20px → 1.25rem */
+    width: 90%;
+    max-width: 15rem;
+  }
+}
