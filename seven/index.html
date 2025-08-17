@@ -21,11 +21,6 @@
         <h1 class="logo">
           <a href="#"><img src="./img/logo.jpg" alt="seven-eleven" /></a>
         </h1>
-        <button class="mobile-menu-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
         <ul class="gnb">
           <li>
             <a href="#">브랜드 스토리</a>
@@ -71,13 +66,24 @@
             </ul>
           </li>
         </ul>
+        <!-- 검색창 추가 -->
+        <div class="search-container">
+          <input type="text" class="search-box" placeholder="상품명, 브랜드, 키워드를 입력하세요">
+          <button type="button" class="search-btn" aria-label="검색"></button>
+        </div>
+        <!-- 햄버거 메뉴 버튼 -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="모바일 메뉴 열기">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
-    </div>
-  </header>
+     </div>
+   </header>
 
 
   <main class="container">
-    <section class="visual">
+    <main class="visual">
       <div class="slide">
         <figure class="slide-img">
           <img src="./img/header-2.jpg" alt="2" />
@@ -98,18 +104,16 @@
       <!-- 제어버튼 -->
       <button class="btn btn-prev">PREV</button>
       <button class="btn btn-next">NEXT</button>
-    </section>
-
-    <section class="download">
-      <div>
-        <figure><img src="./img/banner1.jpg" alt="download"></figure>
+    </main>
+    <section class="line-banner">
+      <div class="inner">
+        <div class="download">
+          <figure><img src="./img/banner1.jpg" alt="세븐일레븐을 만나는 빠른 방법"></figure>
+          <figure><img src="./img/banner2.jpg" alt="L-point 앱다운로드"></figure>
+        </div>
       </div>
-      <div>
-        <figure><img src="./img/banner2.jpg" alt="download"></figure>
-      </div>
     </section>
-
-
+    
     <section class="ONLY">
       <div class="inner">
         <div>
@@ -230,61 +234,65 @@
 
     <section class="sale-card">
       <div class="inner">
-        <h1 class="sec-title">할인.멤버쉽 카드</h1>
-        <p class="sec-title-p">세븐일레븐 매장에서 할인 및 멤버십 혜택을 누리세요.</p>
+        <div>
+          <h1 class="sec-title">할인.멤버쉽 카드</h1>
+          <p class="sec-title-p">세븐일레븐 매장에서 할인 및 멤버십 혜택을 누리세요.</p>
+        </div>
+        
+        <div class="card-slide">
+          <div>
+            <figure class="card-img">
+              <img src="./img/card-1.jpg" alt="T멤버쉽" />
+            </figure>
+            <dl>
+              <dt>T멤버쉽</dt>
+              <dd>스타벅스50%<br>
+                스트리밍30%할인</dd>
+            </dl>
+          </div>
+          <div>
+            <figure class="card-img">
+              <img src="./img/card-2.jpg" alt="OK캐시백" />
+            </figure>
+            <dl>
+              <dt>OK캐시백</dt>
+              <dd>스타벅스50%<br>
+                스트리밍30%할인</dd>
+            </dl>
+          </div>
+          <div>
+            <figure class="card-img">
+              <img src="./img/card-3.jpg" alt="현대M카드" />
+            </figure>
+            <dl>
+              <dt>현대M카드</dt>
+              <dd>스타벅스50%<br>
+                스트리밍30%할인</dd>
+            </dl>
+          </div>
+          <div>
+            <figure class="card-img">
+              <img src="./img/card-4.jpg" alt="신한카드" />
+            </figure>
+            <dl>
+              <dt>신한카드</dt>
+              <dd>스타벅스50%<br>
+                스트리밍30%할인</dd>
+            </dl>
+          </div>
+          <div>
+            <figure class="card-img">
+              <img src="./img/card-5.jpg" alt="롯데카드" />
+            </figure>
+            <dl>
+              <dt>롯데카드</dt>
+              <dd>스타벅스50%<br>
+                스트리밍30%할인</dd>
+            </dl>
+          </div>
+        </div>
       </div>
-      <div class="card-slide">
-        <div>
-          <figure class="card-img">
-            <img src="./img/card-1.jpg" alt="1" />
-          </figure>
-          <dl>
-            <dt>T멤버쉽</dt>
-            <dd>스타벅스50%<br>
-              스트리밍30%할인</dd>
-          </dl>
-        </div>
-        <div>
-          <figure class="card-img">
-            <img src="./img/card-2.jpg" alt="2" />
-          </figure>
-          <dl>
-            <dt>OK캐시백</dt>
-            <dd>스타벅스50%<br>
-              스트리밍30%할인</dd>
-          </dl>
-        </div>
-        <div>
-          <figure class="card-img">
-            <img src="./img/card-3.jpg" alt="3" />
-          </figure>
-          <dl>
-            <dt>현대M카드</dt>
-            <dd>스타벅스50%<br>
-              스트리밍30%할인</dd>
-          </dl>
-        </div>
-        <div>
-          <figure class="card-img">
-            <img src="./img/card-4.jpg" alt="4" />
-          </figure>
-          <dl>
-            <dt>신한카드</dt>
-            <dd>스타벅스50%<br>
-              스트리밍30%할인</dd>
-          </dl>
-        </div>
-        <div>
-          <figure class="card-img">
-            <img src="./img/card-5.jpg" alt="5" />
-          </figure>
-          <dl>
-            <dt>롯데카드</dt>
-            <dd>스타벅스50%<br>
-              스트리밍30%할인</dd>
-          </dl>
-        </div>
-      </div>
+      
     </section>
 
     <section class="guid">
@@ -293,6 +301,7 @@
           <h1 class="sec-title">창업안내</h1>
           <p class="sec-title-p">7-ELEVEN의 스마트한 창업설계를 받아보세요.</p>
         </div>
+          
         <div class="guid-sec">
           <dl class="guid-list">
             <dt>창업점포추천</dt>
@@ -314,14 +323,13 @@
             <dd>브랜드 파워를 소개합니다.</dd>
             <dd><img src="./img/guide-4.svg" alt=""></dd>
           </dl>
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="seven-back">
+    <div class="seven-back">
       <figure><img src="./img/footer-background.jpg" alt=""></figure>
-    </section>
-  </main>
+    </div>
   <footer id="footer">
     <div class="inner">
       <div class="footer-wrap">
