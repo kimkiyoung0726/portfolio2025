@@ -1,41 +1,367 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>portfolio</title>
+  <title>"세븐일레븐":리뉴얼 디자인</title>
   <link rel="stylesheet" href="./css/reset.css" />
   <link rel="stylesheet" href="./css/slick.css" />
-  <link rel="stylesheet" href="./css/aos.css" />
   <link rel="stylesheet" href="./css/style.css" />
 
   <script src="./js/jquery-3.3.1.min.js"></script>
   <script src="./js/slick.min.js"></script>
-  <script src="./js/aos.js"></script>
   <script src="./js/script.js"></script>
-
-  <!-- 파비콘 -->
-  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <section class="portfolio" id="portfolio">
-        <div class="portfolio-list">
-          <div class="portfolio-item item1" onclick="window.open('./seven/index.html')">
-              <p>세븐일레븐 | Redesign<br>2023.03</p>
-          </div>
-           <div class="portfolio-item item3" onclick="window.open('./micro/micro-taxi.html')">
-            <p>모범택시2 | Micro site<br>2023.05</p>
-          </div>
-          <div class="portfolio-item item2" onclick="window.open('./app/app-design.html')">
-              <p>꿈자리 | 앱 디자인 <br>2023.05</p>
-          </div>
-          <div class="portfolio-item item4" onclick="window.open('https://todolist2025-self.vercel.app/')">
-              <p>TODOLIST_ React study<br>2025.06</p>
+  <header id="header">
+    <div class="inner">
+      <nav>
+        <h1 class="logo">
+          <a href="#"><img src="./img/logo.jpg" alt="seven-eleven" /></a>
+        </h1>
+        <ul class="gnb">
+          <li>
+            <a href="#">브랜드 스토리</a>
+            <ul class="submenu">
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">경영방침</a></li>
+              <li><a href="#">채용안내</a></li>
+              <li><a href="#">7-SOCIAL</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">상품 및 서비스</a>
+            <ul class="submenu">
+              <li><a href="#">할인행사상품</a></li>
+              <li><a href="#">차별화상품</a></li>
+              <li><a href="#">할인멤버쉽카드</a></li>
+              <li><a href="#">서비스상품</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">이벤트</a>
+            <ul class="submenu">
+              <li><a href="#">진행중인이벤트</a></li>
+              <li><a href="#">완료된이벤트</a></li>
+              <li><a href="#">고객의소리</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">파트너쉽</a>
+            <ul class="submenu">
+              <li><a href="#">상품입점상담</a></li>
+              <li><a href="#">동반성장</a></li>
+
+            </ul>
+          </li>
+          <li>
+            <a href="#">창업안내</a>
+            <ul class="submenu">
+              <li><a href="#">창업가이드</a></li>
+              <li><a href="#">창업상담</a></li>
+              <li><a href="#">창업점포추천</a></li>
+              <li><a href="#">창업성공기</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- 검색창 추가 -->
+        <div class="search-container">
+          <input type="text" class="search-box" placeholder="상품명, 브랜드, 키워드를 입력하세요">
+          <button type="button" class="search-btn" aria-label="검색"></button>
+        </div>
+        <!-- 햄버거 메뉴 버튼 -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="모바일 메뉴 열기">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+     </div>
+   </header>
+
+
+  <main class="container">
+    <main class="visual">
+      <div class="slide">
+        <figure class="slide-img">
+          <img src="./img/header-2.jpg" alt="2" />
+        </figure>
+        <figure class="slide-img">
+          <img src="./img/header-3.jpg" alt="3" />
+        </figure>
+        <figure class="slide-img">
+          <img src="./img/header-4.jpg" alt="4" />
+        </figure>
+        <figure class="slide-img">
+          <img src="./img/header-5.jpg" alt="5" />
+        </figure>
+        <figure class="slide-img">
+          <img src="./img/header-6.jpg" alt="5" />
+        </figure>
+      </div>
+      <!-- 제어버튼 -->
+      <button class="btn btn-prev">PREV</button>
+      <button class="btn btn-next">NEXT</button>
+    </main>
+    <section class="line-banner">
+      <div class="inner">
+        <div class="download">
+          <figure><img src="./img/banner1.jpg" alt="세븐일레븐을 만나는 빠른 방법"></figure>
+          <figure><img src="./img/banner2.jpg" alt="L-point 앱다운로드"></figure>
+        </div>
+      </div>
+    </section>
+    
+    <section class="ONLY">
+      <div class="inner">
+        <div>
+          <h1 class="sec-title">차별화상품</h1>
+          <p class="sec-title-p">ONLY 7-ELEVEN에만 있는 차별화 상품&제휴상품입니다.</p>
+        </div>
+        <div class="tab">
+          <ul class="tab-menu">
+            <li data-tab="tab1"><a>1+1</a></li>
+            <li data-tab="tab2"><a>2+1</a></li>
+            <li data-tab="tab3"><a>ONLY</a></li>
+          </ul>
+          <div class="tab-contents">
+            <!-- 1+1 -->
+            <div class="tab-con-item" id="tab1">
+              <dl>
+                <dt><img src="./img/1+1-(1).jpg" alt="1"></dt>
+                <dd>수박우유</dd>
+                <dd>1,600원</dd>
+              </dl>
+              <dl>
+                <dt><img src="./img/1+1-(2).jpg" alt="2"></dt>
+                <dd>아메리카노오리지널2</dd>
+                <dd>2,300원</dd>
+              </dl>
+              <dl>
+                <dt><img src="./img/1+1-(3).jpg" alt="3"></dt>
+                <dd>스페셜티예가체프</dd>
+                <dd>2,700원</dd>
+              </dl>
+              <dl>
+                <dt><img src="./img/1+1-(4).jpg" alt="4"></dt>
+                <dd>코코브루니아메리카노</dd>
+                <dd>2,500원</dd>
+              </dl>
+              <dl>
+                <dt><img src="./img/1+1-(5).jpg" alt="5"></dt>
+                <dd>아이스티복숭아</dd>
+                <dd>1,200원</dd>
+              </dl>
+              <dl>
+                <dt><img src="./img/1+1-(6).jpg" alt="6"></dt>
+                <dd>과즙이풍부딸기우유</dd>
+                <dd>2,100원</dd>
+              </dl>
+            </div>
+            <!-- 2+1 -->
+            <div class="tab-con-item" id="tab2">
+              <dl>
+                <dt><img src="./img/2+1-(1).jpg" alt="1"></dt>
+                <dd>베이컨까르보나라파스타</dd>
+                <dd>4,100원</dd>
+              </dl>
+              <dl>
+                <dt><img src="./img/2+1-(2).jpg" alt="2"></dt>
+                <dd>모구모구젤리</dd>
+                <dd>1,500원</dd>
+              </dl>
+              <dl>
+                <dt><img src="./img/2+1-(3).jpg" alt="3"></dt>
+                <dd>아카페라아메리카노</dd>
+                <dd>2,000원</dd>
+              </dl>
+              <dl>
+                <dt><img src="./img/2+1-(4).jpg" alt="4"></dt>
+                <dd>목장딸기요구르트</dd>
+                <dd>2,500원</dd>
+              </dl>
+              <dl>
+                <dt><img src="./img/2+1-(5).jpg" alt="5"></dt>
+                <dd>썬업과일야채퍼플컵</dd>
+                <dd>2,300원</dd>
+              </dl>
+              <dl>
+                <dt><img src="./img/2+1-(6).jpg" alt="6"></dt>
+                <dd>덴마크-인포켓치즈</dd>
+                <dd>1,500원</dd>
+              </dl>
+            </div>
+            <!-- ONLY -->
+            <div class="tab-con-item" id="tab3">
+              <dl>
+                <dt><img src="./img/ONLY-1.jpg" alt="1"></dt>
+                <dd>주문하신아메리카노</dd>
+                <dd>2,500원</dd>
+              </dl>
+              <dl>
+                <dt><img src="./img/ONLY-2.jpg" alt="2"></dt>
+                <dd>오구딸기타임</dd>
+                <dd>1,100원</dd>
+              </dl>
+              <dl>
+                <dt><img src="./img/ONLY-3.jpg" alt="3"></dt>
+                <dd>담음오렌지주스</dd>
+                <dd>1,800원</dd>
+              </dl>
+              <dl>
+                <dt><img src="./img/ONLY-4.jpg" alt="4"></dt>
+                <dd>마쉼카페라떼</dd>
+                <dd>2,600원</dd>
+              </dl>
+              <dl>
+                <dt><img src="./img/ONLY-5.jpg" alt="5"></dt>
+                <dd>런던의오후밀크티</dd>
+                <dd>2,500원</dd>
+              </dl>
+              <dl>
+                <dt><img src="./img/ONLY-6.jpg" alt="6"></dt>
+                <dd>테일러골든캐러멜</dd>
+                <dd>3,300원</dd>
+              </dl>
+            </div>
           </div>
         </div>
+      </div>
     </section>
-  </main>
+
+
+    <section class="sale-card">
+      <div class="inner">
+        <div>
+          <h1 class="sec-title">할인.멤버쉽 카드</h1>
+          <p class="sec-title-p">세븐일레븐 매장에서 할인 및 멤버십 혜택을 누리세요.</p>
+        </div>
+        
+        <div class="card-slide">
+          <div>
+            <figure class="card-img">
+              <img src="./img/card-1.jpg" alt="T멤버쉽" />
+            </figure>
+            <dl>
+              <dt>T멤버쉽</dt>
+              <dd>스타벅스50%<br>
+                스트리밍30%할인</dd>
+            </dl>
+          </div>
+          <div>
+            <figure class="card-img">
+              <img src="./img/card-2.jpg" alt="OK캐시백" />
+            </figure>
+            <dl>
+              <dt>OK캐시백</dt>
+              <dd>스타벅스50%<br>
+                스트리밍30%할인</dd>
+            </dl>
+          </div>
+          <div>
+            <figure class="card-img">
+              <img src="./img/card-3.jpg" alt="현대M카드" />
+            </figure>
+            <dl>
+              <dt>현대M카드</dt>
+              <dd>스타벅스50%<br>
+                스트리밍30%할인</dd>
+            </dl>
+          </div>
+          <div>
+            <figure class="card-img">
+              <img src="./img/card-4.jpg" alt="신한카드" />
+            </figure>
+            <dl>
+              <dt>신한카드</dt>
+              <dd>스타벅스50%<br>
+                스트리밍30%할인</dd>
+            </dl>
+          </div>
+          <div>
+            <figure class="card-img">
+              <img src="./img/card-5.jpg" alt="롯데카드" />
+            </figure>
+            <dl>
+              <dt>롯데카드</dt>
+              <dd>스타벅스50%<br>
+                스트리밍30%할인</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <section class="guid">
+      <div class="inner">
+        <div>
+          <h1 class="sec-title">창업안내</h1>
+          <p class="sec-title-p">7-ELEVEN의 스마트한 창업설계를 받아보세요.</p>
+        </div>
+          
+        <div class="guid-sec">
+          <dl class="guid-list">
+            <dt>창업점포추천</dt>
+            <dd>7-ELEVEN이 엄선한 추천 상권 및 매장을 소개합니다</dd>
+            <dd class="store recom">
+              <!-- <img src="./img/guide-1.svg" alt=""> -->
+            </dd>
+          </dl>
+          <dl class="guid-list">
+            <dt>창업성공기</dt>
+            <dd>생생한 창업 성공기를 확인 해보세요</dd>
+            <dd class="store success-story"></dd>
+          </dl>
+          <dl class="guid-list">
+            <dt>창업상담</dt>
+            <dd>7-ELEVEN 창업에 대한 궁금증을 모두 해결해 드립니다.</dd>
+            <dd class="store consulting"></dd>
+          </dl>
+          <dl class="guid-list">
+            <dt>창업가이드</dt>
+            <dd>브랜드 파워를 소개합니다.</dd>
+            <dd class="store guide"></dd>
+          </dl>
+      </div>
+    </div>
+  </section>
+
+    <div class="seven-back">
+      <figure><img src="./img/footer-background.jpg" alt=""></figure>
+    </div>
+  <footer id="footer">
+    <div class="inner">
+      <div class="footer-wrap">
+        <address>
+          <div class="address-1">
+            <p>CUSTOMER</p>
+            <p>고객의 소리</p>
+            <p>채용문의</p>
+            <p>창업상담</p>
+            <p>입점문의</p>
+            <p>RECRUIT</p>
+            <p>기업채용</p>
+            <p>불공정거래신고</p>
+          </div>
+          <div class="address-2">
+            <p>서울특별시 중구 청계천로 100 시그니처타워 4층</p>
+            <p> TEL 1577-0711</p>
+            <p>/ FAX 02-2679-6860</p>
+            <p>고객센터 : 1688-1211 </p>
+          </div>
+          <div class="address-3">
+            <p>COPYRIGHT 2014 KOREA SEVEN CO, LTD. All Rights Reserved.
+            </p>
+          </div>
+        </address>
+      </div>
+    </div>
+  </footer>
+  <!-- 프로세스 -->
+  <a href="./seven-process.html" target="_blank" class="portfolio-process">PROCESS</a>
 </body>
+
 </html>
