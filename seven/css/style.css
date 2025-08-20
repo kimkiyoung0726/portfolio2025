@@ -414,15 +414,21 @@ header nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 60px;
 }
 
 .tab-con-item dl {
-  width: 30%;
+  width: 25%;
   height: auto;
   background: #fff;
   text-align: center;
   box-shadow: 0 4px 15px rgba(17, 153, 115, 0.3);
+  border-radius: 10px;
+}
+.tab-con-item dl:hover{
+  border: 6px solid #119973;
+  transform: scale(1.1);
+  transition: 0.4s;
 }
 
 /* 이미지 */
@@ -509,6 +515,15 @@ header nav {
   text-align: center;
 
 }
+.guid-list:hover{
+  background: linear-gradient(135deg, #119973, #1abc9c);
+  
+}
+.guid-list:hover dd,
+.guid-list:hover dt{
+  color: #fff;
+  filter: brightness(0) invert(1); /* 마우스 호버 시 흰색 실루엣 */
+}
 
 .guid-list dt {
   font-weight: 800;
@@ -521,6 +536,27 @@ header nav {
   font-size: 20px;
   color: #666;
   margin-top: 10px;
+}
+.guid-list .store{
+  width: 50px;
+  height: 50px;
+  filter: none; /* 기본 상태 */
+}
+.guid-list .recom  {
+  background: url(../img/guide-1.svg) no-repeat center center;
+  background-size: contain;
+}
+.guid-list .success-story{
+  background: url(../img/guide-2.svg) no-repeat center center;
+  background-size: contain;
+}
+.guid-list .consulting{
+  background: url(../img/guide-3.svg) no-repeat center center;
+  background-size: contain;
+} 
+.guid-list .guide{
+  background: url(../img/guide-4.svg) no-repeat center center;
+  background-size: contain;
 }
 
 .seven-back {
@@ -979,7 +1015,7 @@ header nav {
     height: auto;
     margin: 10px 0;
   }
-  
+
   .tab-con-item dt {
     height: 120px;
     margin: 20px 0 10px 0;
