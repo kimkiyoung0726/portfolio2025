@@ -54,14 +54,14 @@ $(function () {
     if ($(window).width() > 1024) {
       $header.addClass('active');
       $(this).addClass('on');
-      $submenu.stop().show();
+      $(this).find('.submenu').stop().fadeIn(300);
     }
   });
   $gnb.on('mouseleave', 'li', function () {
     if ($(window).width() > 1024) {
       $header.removeClass('active');
       $menu.removeClass('on');
-      $submenu.stop().hide();
+      $submenu.stop().fadeOut(300);
     }
   });
 
@@ -107,8 +107,16 @@ $(function () {
     }
   });
 
-  // 모바일에서 메뉴 클릭 시 메뉴 닫기
-  $mobileGnb.on('click', 'a', function() {
+  // 모바일에서 메뉴 클릭 시 아무 동작 안함 (클릭 효과 제거)
+  $mobileGnb.on('click', '> li > a', function(e) {
+    if ($(window).width() <= 1024) {
+      e.preventDefault();
+      // 클릭 효과 제거 - 아무 동작 안함
+    }
+  });
+
+  // 모바일에서 서브메뉴 링크 클릭 시 메뉴 닫기
+  $mobileGnb.on('click', '.submenu a', function() {
     if ($(window).width() <= 1024) {
       $mobileMenuBtn.removeClass('active');
       $mobileGnb.removeClass('mobile-active');
@@ -131,12 +139,14 @@ $(function () {
       // 데스크톱 메뉴 상태 초기화
       $header.removeClass('active');
       $menu.removeClass('on');
-      $submenu.hide();
+      $submenu.fadeOut(300);
+      
+      // 모바일 서브메뉴 상태 초기화 - 더 이상 필요 없음
     } else {
       // 태블릿/모바일로 변경 시 데스크톱 메뉴 상태 초기화
       $header.removeClass('active');
       $menu.removeClass('on');
-      $submenu.hide();
+      $submenu.fadeOut(300);
     }
   });
 });
