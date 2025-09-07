@@ -72,10 +72,16 @@ a {
   background: url("../img/taxi-li-sum-hover.jpg") no-repeat center center;
   background-size: cover;
 }
-
 .item4 {
-   background: url("../img/Todo.png") no-repeat center center;
+   background: url("../img/app-li-sim-1.jpg") no-repeat center center;
 }
+.item4:hover {
+  background: url("../img/app-li-sim-1-hover.jpg") no-repeat center center;
+  background-size: cover;
+}
+/* .item4 {
+   background: url("../img/Todo.png") no-repeat center center;
+} */
 
 /* 포폴별 제목 */
 .portfolio-list .portfolio-item p {
