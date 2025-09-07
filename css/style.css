@@ -54,17 +54,17 @@ a {
 }
 
 .item2 {
-  background: url("../img/app-li-sim-1.jpg") no-repeat center center;
+  background: url("../img/velora-li-sim-1.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .item2:hover {
-  background: url("../img/app-li-sim-1-hover.jpg") no-repeat center center;
+  background: url("../img/velora-li-sim-1-hover.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .item3 {
-  background: url("../img/taxi-li-sum-1.png") no-repeat center center;
+  background: url("../img/taxi-li-sum.png") no-repeat center center;
   background-size: cover;
 }
 
@@ -81,7 +81,7 @@ a {
 .portfolio-list .portfolio-item p {
   position: absolute;
   bottom: 5%;
-  left: 35%;
+  left: 15%;
   font-weight: 800;
   font-size: 1.375rem; /* 22px → 1.375rem */
   color: #fff;

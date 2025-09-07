@@ -640,47 +640,7 @@ header nav {
   opacity: 100%;
 }
 
-.eventpage,
-.portfolio-process{
-  position: fixed;
-  background: linear-gradient(135deg, #119973, #1abc9c);
-  color: #fff;
-  border-radius: 25px;
-  text-align: center;
-  padding: 12px 20px;
-  font-weight: 600;
-  font-size: 14px;
-  box-shadow: 0 4px 15px rgba(17, 153, 115, 0.3);
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-}
 
-.eventpage {
-  bottom: 120px;
-  right: 40px;
-}
-
-.portfolio-process {
-  bottom: 60px;
-  right: 40px;
-}
-
-/* 호버 효과 */
-.eventpage:hover,
-.portfolio-process:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(17, 153, 115, 0.4);
-  background: linear-gradient(135deg, #1abc9c, #16a085);
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.eventpage:active,
-.portfolio-process:active {
-  transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 4px 15px rgba(17, 153, 115, 0.3);
-}
 
 /* ===== 반응형 미디어 쿼리 테블릿,모바일===== */
 
@@ -932,9 +892,6 @@ header nav {
     height: 270px;
     width: 100%;
   }
-  .portfolio-process{
-    display: none;
-  }
   .footer-wrap{
     flex-direction: column;
     align-items: center;
@@ -1153,9 +1110,6 @@ header nav {
     right: 2%;
   }
   
-  .portfolio-process{
-    display: none;
-  }
 }
 
 
@@ -1295,8 +1249,5 @@ header nav {
   .visual .btn {
     width: 30px;
     height: 30px;
-  }
-  .portfolio-process{
-    display: none;
   }
 }

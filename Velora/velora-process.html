@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>velora process </title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    a{
+      text-decoration: none;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+    
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    
+    figure {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .eventpage,
+.portfolio-Design{
+  position: fixed;
+  background:#fff;
+  color: #452500;
+  border-radius: 25px;
+  text-align: center;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 15px rgba(53, 35, 1, 0.3);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.eventpage {
+  bottom: 120px;
+  right: 40px;
+}
+
+.portfolio-Design {
+  bottom: 60px;
+  right: 40px;
+}
+
+/* 호버 효과 */
+.eventpage:hover,
+.portfolio-Design:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(17, 153, 115, 0.4);
+  background: linear-gradient(135deg, #1abc9c, #16a085);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.eventpage:active,
+.portfolio-Design:active {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 15px rgba(17, 153, 115, 0.3);
+}
+  </style>
+</head>
+
+<body>
+  <main>
+    <figure>
+      <img src="./img/process.jpg" alt="velora-process" />
+    </figure>
+  </main>
+
+  <!-- 프로세스 -->
+  <a href="./index.html" target="_blank" class="portfolio-Design">Design</a>
+</body>
+
+</html>
