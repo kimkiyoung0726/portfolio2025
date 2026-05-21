@@ -89,7 +89,9 @@ a {
 .item6 {
    background: url("../img/Todo.png") no-repeat center center;
 }
-
+.item7 {
+   background: url("../img/DSA.jpg") no-repeat center center;
+}
 /* 포폴별 제목 */
 .portfolio-list .portfolio-item p {
   position: absolute;
