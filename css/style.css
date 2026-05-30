@@ -80,17 +80,16 @@ a {
   background-size: cover;
 }
 .item5 {
-   background: url("../img/fit-li-sum-5.jpg") no-repeat center center;
-}
-.item5:hover {
-  background: url("../img/fit-li-sum-5-hover.jpg") no-repeat center center;
-  background-size: cover;
+   background: url("../img/fit-li-sum.png") no-repeat center center;
 }
 .item6 {
    background: url("../img/Todo.png") no-repeat center center;
 }
 .item7 {
    background: url("../img/DSA.jpg") no-repeat center center;
+}
+.item8 {
+   background: url("../img/medicare-li-sum.png") no-repeat center center;
 }
 /* 포폴별 제목 */
 .portfolio-list .portfolio-item p {
