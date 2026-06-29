@@ -91,6 +91,9 @@ a {
 .item8 {
    background: url("../img/DSA.jpg") no-repeat center center;
 }
+.item9{
+  background: url("../img/Mardi.png") no-repeat center center;
+}
 /* 포폴별 제목 */
 .portfolio-list .portfolio-item p {
   position: absolute;
