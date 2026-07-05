@@ -21,44 +21,18 @@
 
 <body>
     <section class="portfolio" id="portfolio">
-        <div class="portfolio-list">
-          
-          
-            <div class="portfolio-item item10" onclick="window.open('./Covernat/covernat-process.html')">
-              <p>Covernat 콘텐츠 디자인<br>스터디 프로젝트 2026.03</p>
-            </div>
-            <div class="portfolio-item item9" onclick="window.open('./Mardi/Mardi-process.html')">
-              <p>Mardi Mercredi 콘텐츠 디자인<br>스터디 프로젝트 2026.02</p>
-            </div>
-           <div class="portfolio-item item2" onclick="window.open('./Velora/velora-process.html')">
-              <p>가상의 가구브랜드<br>웹디자인 2025.08</p>
-            </div>
-            <div class="portfolio-item item8" onclick="window.open('./DSA/dsa-process-cont.html')">
-              <p>데이터사이언스아카데미<br>콘텐츠 디자인 2023.08-2026.03</p>
-          </div>
-          <!-- <div class="portfolio-item item7" onclick="window.open('./DSA/dsa-process.html')">
-              <p>데이터사이언스아카데미 <br> 관리자페이지 2024.11</p>
-            </div> -->
-            <!-- <div class="portfolio-item item5" onclick="window.open('./fittory/fittory-process.html')">
-              <p>건강식품 이커머스 <br> 웹디자인 사이드프로젝트 2025.10</p>
-            </div> -->
-            <!-- <div class="portfolio-item item8" onclick="window.open('./Medicare/medicare-process.html')">
-              <p>병원 예약 & 건강관리 UIUX 앱디자인<br>2026.05</p>
-            </div> -->
-            <!-- <div class="portfolio-item item4" onclick="window.open('./app/app-process.html')">
-              <p>꿈자리 앱디자인<br>2023.05</p>
-            </div> -->
-            <!-- <div class="portfolio-item item1" onclick="window.open('./seven/seven-process.html')">
-                <p>세븐일레븐 리디자인 반응형<br>2023.03</p>
-            </div> -->
-            <!-- <div class="portfolio-item item3" onclick="window.open('./micro/micro-taxi.html')">
-              <p>모범택시2 Micro site<br>2023.04</p>
-            </div> -->
-          <!-- <div class="portfolio-item item6" onclick="window.open('https://todolist2025-self.vercel.app/')">
-            <p>TODOLIST_ React study<br>2025.06</p>
-          </div> -->
+        <!--
+          [유지보수 가이드] 탭(.portfolio-tab)을 추가/삭제할 땐 data-url에
+          해당 프로젝트 상세 페이지 경로를 지정하면 됨. 탭 클릭 시 새 창이 아니라
+          아래 iframe(.portfolio-frame) 안에서 해당 페이지로 바로 전환됨(js/script.js 참고).
+        -->
+        <div class="portfolio-tabs">
+          <button class="portfolio-tab active" type="button" data-url="./Covernat/covernat-process.html">Covernat 콘텐츠 디자인</button>
+          <button class="portfolio-tab" type="button" data-url="./Mardi/Mardi-process.html">Mardi Mercredi 콘텐츠 디자인</button>
+          <button class="portfolio-tab" type="button" data-url="./Velora/velora-process.html">가상의 가구브랜드 웹디자인</button>
+          <button class="portfolio-tab" type="button" data-url="./DSA/dsa-process-cont.html">데이터사이언스아카데미 콘텐츠 디자인</button>
         </div>
+        <iframe class="portfolio-frame" src="./Covernat/covernat-process.html" title="프로젝트 상세"></iframe>
     </section>
-  </main>
 </body>
 </html>

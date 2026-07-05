@@ -1,24 +1,13 @@
-<<<<<<< HEAD
-// 포트폴리오
+// 포트폴리오 탭 - 탭의 data-url을 iframe(.portfolio-frame)의 src로 전환
 $(function () {
-  const $portfolioItem = $(".portfolio-item");
-  let portIdx = 0;
-  changePortfolioItem(0);
+  const $tabs = $(".portfolio-tab");
+  const $frame = $(".portfolio-frame");
 
-  $portfolioItem.on("click", function () {
-    portIdx = $(this).index();
-    changePortfolioItem(portIdx);
-  });
-=======
-// 포트폴리오
-$(function () {
-  const $portfolioItem = $(".portfolio-item");
-  let portIdx = 0;
-  changePortfolioItem(0);
+  $tabs.on("click", function () {
+    $tabs.removeClass("active");
+    $(this).addClass("active");
 
-  $portfolioItem.on("click", function () {
-    portIdx = $(this).index();
-    changePortfolioItem(portIdx);
+    const url = $(this).data("url");
+    if (url) $frame.attr("src", url);
   });
->>>>>>> e30074e (처음 커밋)
 });
