@@ -706,11 +706,7 @@ li {
 
 .store__text {
   max-width: 360px;
-  padding: 28px 32px;
-  border-radius: 16px;
-  background: rgba(20, 18, 14, 0.45);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 2px 16px rgba(0, 0, 0, 0.3);
 }
 
 .store__eyebrow {
@@ -756,19 +752,24 @@ li {
 }
 
 .store__card-photo {
+  position: relative;
   flex: 1;
   border-radius: 12px;
   overflow: hidden;
 }
 
 .store__card-photo img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity var(--transition);
+  transition: transform 0.45s var(--ease);
 }
 
 .store__card-empty {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -780,6 +781,7 @@ li {
   color: rgba(255, 255, 255, 0.85);
   background: rgba(255, 255, 255, 0.08);
   border-radius: 12px;
+  transition: transform 0.45s var(--ease);
 }
 
 .store__arrow {
@@ -787,12 +789,17 @@ li {
   top: 50%;
   transform: translateY(-50%);
   z-index: 3;
-  padding: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: transform var(--transition-fast), opacity var(--transition-fast);
 }
 
 .store__arrow img {
   width: 20px;
+  height: 20px;
 }
 
 .store__arrow:hover {
@@ -801,11 +808,23 @@ li {
 }
 
 .store__arrow--prev {
-  left: 4%;
+  right: 100%;
+  margin-right: 20px;
+  transform: translateY(-50%);
 }
 
 .store__arrow--next {
-  right: 4%;
+  left: 100%;
+  margin-left: 20px;
+  transform: translateY(-50%);
+}
+
+.store__arrow--prev:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.store__arrow--next:hover {
+  transform: translateY(-50%) scale(1.2);
 }
 
 /* ==========================================================================

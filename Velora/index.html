@@ -215,13 +215,30 @@
       <div class="store__media">
         <picture>
           <source media="(max-width: 767px)" srcset="./img/store/interior-mobile.jpg" />
-          <img src="./img/store/interior.jpg" alt="아치형 플로어 램프와 벨벳 소파가 있는 Velora 매장 내부" class="store__bg" id="storeBg" />
+          <img src="./img/store/interior.jpg" alt="아치형 플로어 램프와 벨벳 소파가 있는 Velora 매장 내부" class="store__bg" />
         </picture>
       </div>
 
       <div class="store__inner">
+        <div class="store__text">
+          <p class="store__eyebrow">STORE</p>
+          <h2 id="store-heading">직접 만지고 느껴보세요</h2>
+          <p class="store__desc">집 안에 부드럽고 고급스러운<br />Velora 매장으로 초대합니다.</p>
+          <a href="#" class="link-more link-more--light">View more</a>
+        </div>
 
-
+        <div class="store__card">
+          <button type="button" class="store__arrow store__arrow--prev" id="storePrev" aria-label="이전 매장 보기">
+            <img src="./img/icons/chevron-left-light.svg" alt="" />
+          </button>
+          <p class="store__card-label" id="storeLabel">마포</p>
+          <div class="store__card-photo" id="storePhotoWrap">
+            <img src="./img/store/mapo-thumb.jpg" alt="마포 매장 쇼룸 - 오렌지 암체어와 라탄 콘솔" class="is-current" />
+          </div>
+          <button type="button" class="store__arrow store__arrow--next" id="storeNext" aria-label="다음 매장 보기">
+            <img src="./img/icons/chevron-right-light.svg" alt="" />
+          </button>
+        </div>
       </div>
     </section>
 

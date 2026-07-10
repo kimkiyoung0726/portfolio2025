@@ -200,40 +200,57 @@ function initGalleryDrag() {
 function initStoreCarousel() {
   const label = document.getElementById('storeLabel');
   const photoWrap = document.getElementById('storePhotoWrap');
-  const bg = document.getElementById('storeBg');
   const prevBtn = document.getElementById('storePrev');
   const nextBtn = document.getElementById('storeNext');
   if (!label || !photoWrap || !prevBtn || !nextBtn) return;
 
+  // 매장 배경(store__bg)은 고정, 이 카드 안의 사진만 매장별로 슬라이딩 전환된다.
   const stores = [
-    {
-      name: '마포',
-      photo: './img/store/mapo-thumb.jpg',
-      alt: '마포 매장 쇼룸 - 오렌지 암체어와 라탄 콘솔',
-      bg: './img/store/interior.jpg',
-    },
-    { name: '강남', photo: null, alt: '강남 매장 - 오픈 예정', bg: './img/store/interior.jpg' },
-    { name: '잠실', photo: null, alt: '잠실 매장 - 오픈 예정', bg: './img/store/interior.jpg' },
+    { name: '마포', photo: './img/store/mapo-thumb.jpg', alt: '마포 매장 쇼룸 - 오렌지 암체어와 라탄 콘솔' },
+    { name: '강남', photo: null, alt: '강남 매장 - 오픈 예정' },
+    { name: '잠실', photo: null, alt: '잠실 매장 - 오픈 예정' },
   ];
 
   let current = 0;
+  let animating = false;
 
-  function render() {
-    const store = stores[current];
-    label.textContent = store.name;
-
+  function buildEl(store) {
     if (store.photo) {
-      photoWrap.innerHTML = `<img src="${store.photo}" alt="${store.alt}" />`;
-    } else {
-      photoWrap.innerHTML = `<p class="store__card-empty">${store.name} 매장을<br />준비하고 있어요.</p>`;
+      const img = document.createElement('img');
+      img.src = store.photo;
+      img.alt = store.alt;
+      return img;
     }
-
-    if (bg && store.bg) bg.src = store.bg;
+    const empty = document.createElement('p');
+    empty.className = 'store__card-empty';
+    empty.innerHTML = `${store.name} 매장을<br />준비하고 있어요.`;
+    return empty;
   }
 
   function step(delta) {
+    if (animating) return;
+    animating = true;
+
     current = (current + delta + stores.length) % stores.length;
-    render();
+    const store = stores[current];
+    label.textContent = store.name;
+
+    const outgoing = photoWrap.firstElementChild;
+    const incoming = buildEl(store);
+    incoming.style.transform = `translateX(${delta > 0 ? 100 : -100}%)`;
+    photoWrap.appendChild(incoming);
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        if (outgoing) outgoing.style.transform = `translateX(${delta > 0 ? -100 : 100}%)`;
+        incoming.style.transform = 'translateX(0)';
+      });
+    });
+
+    setTimeout(() => {
+      if (outgoing) outgoing.remove();
+      animating = false;
+    }, 450);
   }
 
   prevBtn.addEventListener('click', () => step(-1));
