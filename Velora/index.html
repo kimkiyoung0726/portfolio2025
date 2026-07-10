@@ -19,12 +19,53 @@
 
       <nav class="gnb" id="gnb" aria-label="주요 메뉴">
         <ul class="gnb__list">
-          <li><a href="./eventpage.html">EVENT</a></li>
-          <li><a href="#product">PRODUCT</a></li>
-          <li><a href="#">BRAND</a></li>
-          <li><a href="#">REVIEW</a></li>
-          <li><a href="#">MAGAZINE</a></li>
-          <li><a href="#">고객센터</a></li>
+          <li class="gnb__item has-dropdown">
+            <a href="./eventpage.html" class="gnb__link">EVENT</a>
+            <button type="button" class="gnb__caret" aria-label="EVENT 하위 메뉴 열기" aria-expanded="false"></button>
+            <div class="gnb__dropdown">
+              <ul>
+                <li><a href="#">진행중인 이벤트</a></li>
+                <li><a href="#">이벤트 상세</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="gnb__item has-dropdown">
+            <a href="#product" class="gnb__link">PRODUCT</a>
+            <button type="button" class="gnb__caret" aria-label="PRODUCT 하위 메뉴 열기" aria-expanded="false"></button>
+            <div class="gnb__dropdown gnb__dropdown--columns">
+              <div class="gnb__dropdown-col">
+                <p class="gnb__dropdown-title">카테고리</p>
+                <ul>
+                  <li><a href="#">Living</a></li>
+                  <li><a href="#">Chair</a></li>
+                  <li><a href="#">Table</a></li>
+                  <li><a href="#">Bed</a></li>
+                </ul>
+              </div>
+              <div class="gnb__dropdown-col">
+                <ul>
+                  <li><a href="#">신상품</a></li>
+                  <li><a href="#">베스트</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="gnb__item"><a href="#" class="gnb__link">BRAND</a></li>
+          <li class="gnb__item"><a href="#" class="gnb__link">REVIEW</a></li>
+          <li class="gnb__item"><a href="#" class="gnb__link">MAGAZINE</a></li>
+          <li class="gnb__item has-dropdown">
+            <a href="#" class="gnb__link">고객센터</a>
+            <button type="button" class="gnb__caret" aria-label="고객센터 하위 메뉴 열기" aria-expanded="false"></button>
+            <div class="gnb__dropdown">
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">1:1문의</a></li>
+                <li><a href="#">배송/반품안내</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">1:1문의</a></li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </nav>
 

@@ -227,7 +227,18 @@ li {
   gap: 40px;
 }
 
-.gnb__list a {
+.gnb__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.gnb__caret {
+  display: none;
+}
+
+.gnb__link {
+  display: inline-block;
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -236,11 +247,11 @@ li {
   position: relative;
 }
 
-.gnb__list a::after {
+.gnb__link::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 4px;
   width: 100%;
   height: 1px;
   background: currentColor;
@@ -249,9 +260,77 @@ li {
   transition: transform var(--transition-fast);
 }
 
-.gnb__list a:hover::after {
+.gnb__link:hover::after,
+.gnb__item:focus-within .gnb__link::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+/* ---- Dropdown (desktop: plain per-item hover dropdown) ----
+   Positioning/hover-trigger only apply from 768px up so a higher-specificity
+   :hover rule can never leak its transform into the mobile accordion layout. */
+.gnb__dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-fast), transform var(--transition-fast), visibility var(--transition-fast);
+}
+
+@media (min-width: 768px) {
+  .gnb__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -6px);
+    min-width: 168px;
+    padding: 16px 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 16px 36px rgba(38, 36, 33, 0.14);
+    z-index: 50;
+  }
+
+  .gnb__item.has-dropdown:hover .gnb__dropdown,
+  .gnb__item.has-dropdown:focus-within .gnb__dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+  }
+}
+
+.gnb__dropdown ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.gnb__dropdown a {
+  display: block;
+  padding: 9px 24px;
+  font-size: 0.85rem;
+  color: var(--color-text);
+  white-space: nowrap;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.gnb__dropdown a:hover {
+  color: var(--color-gold);
+  background: var(--color-cream);
+}
+
+.gnb__dropdown--columns {
+  display: flex;
+  gap: 32px;
+  padding: 20px 24px;
+  min-width: 240px;
+}
+
+.gnb__dropdown-title {
+  padding: 0 0 8px;
+  font-size: 0.78rem;
+  color: var(--color-muted);
+}
+
+.gnb__dropdown--columns a {
+  padding: 7px 0;
 }
 
 .header__utils {
@@ -1079,11 +1158,83 @@ li {
     gap: 4px;
   }
 
-  .gnb__list a {
+  .gnb__item {
+    flex-direction: column;
+    align-items: stretch;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .gnb__link {
     display: block;
     padding: 14px 0;
     font-size: 1.05rem;
-    border-bottom: 1px solid var(--color-line);
+  }
+
+  .gnb__link::after {
+    display: none;
+  }
+
+  .gnb__caret {
+    display: block;
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  .gnb__caret::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: url("../img/icons/chevron-right.svg") center / 11px no-repeat;
+    transform: rotate(90deg);
+    transition: transform var(--transition-fast);
+  }
+
+  .gnb__caret[aria-expanded="true"]::before {
+    transform: rotate(-90deg);
+  }
+
+  .gnb__dropdown {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    min-width: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition);
+  }
+
+  .has-dropdown.is-open .gnb__dropdown {
+    max-height: 400px;
+  }
+
+  .gnb__dropdown a {
+    padding: 11px 0 11px 16px;
+    font-size: 0.95rem;
+    color: var(--color-muted);
+  }
+
+  .gnb__dropdown--columns {
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 0 8px;
+    min-width: 0;
+  }
+
+  .gnb__dropdown-title {
+    padding: 10px 0 4px 16px;
+  }
+
+  .gnb__dropdown--columns a {
+    padding: 7px 0 7px 16px;
   }
 
   .header__store-link {

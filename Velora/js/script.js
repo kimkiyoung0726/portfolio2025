@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initHeaderScroll();
   initMobileNav();
+  initGnbDropdowns();
   initBestSection();
   initProductsTabs();
   initGalleryDrag();
@@ -38,6 +39,12 @@ function initMobileNav() {
     toggle.setAttribute('aria-expanded', 'false');
     dim.classList.remove('is-visible');
     dim.hidden = true;
+
+    gnb.querySelectorAll('.gnb__item.has-dropdown.is-open').forEach((item) => {
+      item.classList.remove('is-open');
+      const caret = item.querySelector('.gnb__caret');
+      if (caret) caret.setAttribute('aria-expanded', 'false');
+    });
   };
 
   const open = () => {
@@ -61,6 +68,21 @@ function initMobileNav() {
 
   window.addEventListener('resize', () => {
     if (window.innerWidth > 767) close();
+  });
+}
+
+/* ---------------------------------------------------------------------- */
+/* GNB dropdown: plain hover on desktop (CSS), tap accordion on mobile    */
+/* ---------------------------------------------------------------------- */
+function initGnbDropdowns() {
+  document.querySelectorAll('.gnb__item.has-dropdown').forEach((item) => {
+    const caret = item.querySelector('.gnb__caret');
+    if (!caret) return;
+
+    caret.addEventListener('click', () => {
+      const isOpen = item.classList.toggle('is-open');
+      caret.setAttribute('aria-expanded', String(isOpen));
+    });
   });
 }
 
