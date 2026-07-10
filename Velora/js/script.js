@@ -72,10 +72,19 @@ function initBestSection() {
   const tabs = document.querySelectorAll('.best__tab');
   const panels = document.querySelectorAll('[data-best-panel]');
   const info = document.getElementById('bestInfo');
+  const infoTitle = info ? info.querySelector('h3') : null;
+  const infoDesc = info ? info.querySelector('p') : null;
   const dotsWrap = document.getElementById('bestDots');
   const prevBtn = document.getElementById('bestPrev');
   const nextBtn = document.getElementById('bestNext');
   if (!tabs.length || !dotsWrap) return;
+
+  // 실제 상품명/설명이 정해지면 아래 값만 교체하면 된다.
+  const infoText = {
+    sofa: { title: 'Tiffany 4 people<br />cowhide sofa', desc: '4인 소가죽 소파' },
+    bed: { title: 'Tiffany 4 people<br />cowhide bed', desc: '4인 소가죽 침대' },
+    table: { title: 'Tiffany 4 people<br />cowhide table', desc: '소가죽 콤비네이션 테이블' },
+  };
 
   let current = 'sofa';
 
@@ -97,7 +106,9 @@ function initBestSection() {
       panel.hidden = panel.dataset.bestPanel !== current;
     });
 
-    if (info) info.hidden = current !== 'sofa';
+    const text = infoText[current];
+    if (text && infoTitle) infoTitle.innerHTML = text.title;
+    if (text && infoDesc) infoDesc.textContent = text.desc;
 
     dots.forEach((dot, i) => dot.classList.toggle('is-active', order[i] === current));
   }
