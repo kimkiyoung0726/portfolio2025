@@ -147,50 +147,19 @@ function initProductsTabs() {
 }
 
 /* ---------------------------------------------------------------------- */
-/* Gallery: mouse drag-to-scroll (touch/trackpad already native)          */
+/* Gallery: seamless auto-flowing marquee                                 */
 /* ---------------------------------------------------------------------- */
 function initGalleryDrag() {
   const list = document.getElementById('galleryList');
   if (!list) return;
 
-  let isDown = false;
-  let startX = 0;
-  let startScroll = 0;
-  let moved = false;
-
-  list.addEventListener('pointerdown', (e) => {
-    if (e.pointerType === 'touch') return;
-    isDown = true;
-    moved = false;
-    startX = e.clientX;
-    startScroll = list.scrollLeft;
-    list.setPointerCapture(e.pointerId);
-  });
-
-  list.addEventListener('pointermove', (e) => {
-    if (!isDown) return;
-    const delta = e.clientX - startX;
-    if (Math.abs(delta) > 4) moved = true;
-    list.scrollLeft = startScroll - delta;
-  });
-
-  const stop = () => {
-    isDown = false;
-  };
-  list.addEventListener('pointerup', stop);
-  list.addEventListener('pointerleave', stop);
-
-  list.addEventListener(
-    'click',
-    (e) => {
-      if (moved) e.preventDefault();
-    },
-    true
-  );
-
-  list.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') list.scrollBy({ left: 240, behavior: 'smooth' });
-    if (e.key === 'ArrowLeft') list.scrollBy({ left: -240, behavior: 'smooth' });
+  // 무한 루프처럼 보이도록 목록을 통째로 복제해 이어붙인다 (translateX(-50%)로 되감기).
+  const originalItems = [...list.children];
+  originalItems.forEach((li) => {
+    const clone = li.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    clone.querySelectorAll('img').forEach((img) => img.removeAttribute('loading'));
+    list.appendChild(clone);
   });
 }
 
