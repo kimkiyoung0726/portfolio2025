@@ -1,58 +1,291 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>velora 메인 </title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      overflow-x: hidden;
-    }
-    
-    main {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-  </style>
+  <title>Velora | Soft Elegance, Timeless Home</title>
+  <meta name="description" content="벨로라(Velora) - 소가죽 소파, 조명, 리빙 소품을 만나는 홈퍼니싱 브랜드 공식 홈페이지" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
-  <main>
-    <figure>
-      <img src="./img/main.jpg" alt="velora-mainpage" />
-    </figure>
+  <a href="#main-content" class="skip-link">본문 바로가기</a>
+
+  <header class="header" id="header">
+    <div class="inner header__inner">
+      <a href="./index.html" class="header__logo" aria-label="Velora 홈으로 이동">Velora</a>
+
+      <nav class="gnb" id="gnb" aria-label="주요 메뉴">
+        <ul class="gnb__list">
+          <li><a href="./eventpage.html">EVENT</a></li>
+          <li><a href="#product">PRODUCT</a></li>
+          <li><a href="#">BRAND</a></li>
+          <li><a href="#">REVIEW</a></li>
+          <li><a href="#">MAGAZINE</a></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__utils">
+        <a href="#store" class="header__store-link">매장안내</a>
+        <button type="button" class="header__icon-btn" aria-label="검색">
+          <img src="./img/icons/search.svg" alt="" class="icon" />
+        </button>
+        <button type="button" class="header__icon-btn" aria-label="장바구니">
+          <img src="./img/icons/cart.svg" alt="" class="icon" />
+        </button>
+        <button type="button" class="header__icon-btn" aria-label="마이페이지">
+          <img src="./img/icons/user.svg" alt="" class="icon" />
+        </button>
+        <button type="button" class="header__menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="gnb">
+          <img src="./img/icons/menu.svg" alt="" class="icon icon--menu" />
+          <img src="./img/icons/close.svg" alt="" class="icon icon--close" />
+          <span class="sr-only">전체 메뉴 열기</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="gnb-dim" id="gnbDim" hidden></div>
+
+  <main id="main-content">
+
+    <section class="hero" aria-label="Velora 브랜드 소개">
+      <img src="./img/hero/living-room.jpg" alt="올리브 톤 벽과 라탄 콘솔, 초록 식물이 어우러진 Velora 쇼룸 거실" class="hero__bg" />
+      <div class="hero__overlay">
+        </div>
+      </div>
+    </section>
+
+    <section class="best" id="best" aria-labelledby="best-heading">
+      <div class="inner">
+        <h2 id="best-heading" class="section-title">Best</h2>
+
+        <div class="best__content">
+          <ul class="best__tabs" role="tablist" aria-label="베스트 카테고리">
+            <li role="presentation">
+              <button type="button" class="best__tab is-active" role="tab" aria-selected="true" data-best="sofa">sofa</button>
+            </li>
+            <li role="presentation">
+              <button type="button" class="best__tab" role="tab" aria-selected="false" data-best="bed">bed</button>
+            </li>
+            <li role="presentation">
+              <button type="button" class="best__tab" role="tab" aria-selected="false" data-best="table">Table</button>
+            </li>
+          </ul>
+
+          <div class="best__viewer">
+            <div class="best__stage" id="bestStage">
+              <figure class="best__slide" data-best-panel="sofa">
+                <img src="./img/best/sofa-main.png" alt="티파니 4인 소가죽 소파가 놓인 쇼룸 컷" />
+              </figure>
+              <div class="best__bed" data-best-panel="bed" hidden>
+                <img src="./img/best/sofa-bed.png" alt="티파니 4인 침대가 놓인 쇼룸 컷" />
+              </div>
+              <div class="best__table" data-best-panel="table" hidden>
+                <img src="./img/best/sofa-table.png" alt="티파니 4인 table가 놓인 쇼룸 컷" />
+              </div>
+            </div>
+            <div class="best__nav">
+              <button type="button" class="best__arrow" id="bestPrev" aria-label="이전 카테고리">
+                <img src="./img/icons/chevron-left.svg" alt="" />
+              </button>
+              <span class="best__dots" id="bestDots" aria-hidden="true"></span>
+              <button type="button" class="best__arrow" id="bestNext" aria-label="다음 카테고리">
+                <img src="./img/icons/chevron-right.svg" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <div class="best__info" id="bestInfo">
+            <h3>Tiffany 4 people<br />cowhide sofa</h3>
+            <p>4인 소가죽 소파</p>
+            <a href="#" class="link-more">
+              View more
+              <span class="link-more__circle"><img src="./img/icons/chevron-right.svg" alt="" /></span>
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="products" id="product" aria-labelledby="products-heading">
+      <div class="inner">
+        <h2 id="products-heading" class="section-title">Products</h2>
+
+        <ul class="products__tabs" role="tablist" aria-label="상품 카테고리">
+          <li role="presentation">
+            <button type="button" class="products__tab is-active" role="tab" aria-selected="true" data-products="living">Living</button>
+          </li>
+          <li role="presentation">
+            <button type="button" class="products__tab" role="tab" aria-selected="false" data-products="chair">Chair</button>
+          </li>
+          <li role="presentation">
+            <button type="button" class="products__tab" role="tab" aria-selected="false" data-products="style">style</button>
+          </li>
+        </ul>
+
+        <div class="products__panel" data-products-panel="living">
+          <ul class="products__grid">
+            <li class="products__item">
+              <a href="#">
+                <figure>
+                  <img src="./img/products/clock.jpg" alt="포지타노 벽시계" loading="lazy" />
+                  <figcaption>포지타노 벽시계</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="products__item">
+              <a href="#">
+                <figure>
+                  <img src="./img/products/lighting.jpg" alt="포지타노 조명" loading="lazy" />
+                  <figcaption>포지타노 조명</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="products__item">
+              <a href="#">
+                <figure>
+                  <img src="./img/products/bowl.jpg" alt="포지타노 뮈슬리 볼" loading="lazy" />
+                  <figcaption>포지타노 뮈슬리 볼</figcaption>
+                </figure>
+              </a>
+            </li>
+            <li class="products__item">
+              <a href="#">
+                <figure>
+                  <img src="./img/products/tray.jpg" alt="솔레나 트레이" loading="lazy" />
+                  <figcaption>솔레나 트레이</figcaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="products__panel" data-products-panel="chair" hidden>
+          <p class="products__empty">Chair 컬렉션을 준비하고 있어요. 조금만 기다려 주세요.</p>
+        </div>
+        <div class="products__panel" data-products-panel="style" hidden>
+          <p class="products__empty">style 컬렉션을 준비하고 있어요. 조금만 기다려 주세요.</p>
+        </div>
+
+        <div class="products__banners">
+          <a href="#" class="banner banner--guide">
+            <span class="banner__text">
+              <strong>프로모션 혜택 가이드</strong>
+              <em>공식몰의 모든 혜택을 한눈에!</em>
+            </span>
+            <img src="./img/products/icon-guide.png" alt="" class="banner__icon" />
+          </a>
+          <a href="#" class="banner banner--move">
+            <span class="banner__text">
+              <strong>입주 이사 프로모션</strong>
+              <em>최대 10% 할인</em>
+            </span>
+            <img src="./img/products/icon-move.png" alt="" class="banner__icon" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery" aria-labelledby="gallery-heading">
+      <div class="inner gallery__head">
+        <div class="gallery__heading">
+          <h2 id="gallery-heading" class="section-title section-title--left">Living Room Style</h2>
+          <p class="section-desc">고객님들의 실제 공간이 담긴 솔직 리뷰</p>
+        </div>
+        <a href="#" class="link-more link-more--text">View more</a>
+      </div>
+
+      <ul class="gallery__list" id="galleryList" tabindex="0" aria-label="고객 리빙룸 스타일 이미지 목록, 좌우로 스크롤 가능">
+        <li><img src="./img/gallery/room-1.jpg" alt="화이트 톤 리빙룸, 사이드 테이블 위 책과 잡지 데코" loading="lazy" /></li>
+        <li><img src="./img/gallery/room-2.jpg" alt="따뜻한 창가 조명 아래 놓인 올리브 컬러 패브릭 소파" loading="lazy" /></li>
+        <li><img src="./img/gallery/room-3.jpg" alt="다크 그린 벽면과 액자 3연작이 있는 거실" loading="lazy" /></li>
+        <li><img src="./img/gallery/room-4.jpg" alt="원목 선반과 데스크가 있는 미니멀 공간" loading="lazy" /></li>
+        <li><img src="./img/gallery/room-5.jpg" alt="펜던트 조명과 라운드 테이블이 있는 리빙 공간" loading="lazy" /></li>
+        <li><img src="./img/gallery/room-5.jpg" alt="펜던트 조명과 라운드 테이블이 있는 리빙 공간" loading="lazy" /></li>
+        <li><img src="./img/gallery/room-5.jpg" alt="펜던트 조명과 라운드 테이블이 있는 리빙 공간" loading="lazy" /></li>
+        <li><img src="./img/gallery/room-5.jpg" alt="펜던트 조명과 라운드 테이블이 있는 리빙 공간" loading="lazy" /></li>
+      </ul>
+    </section>
+
+    <section class="store" id="store" aria-labelledby="store-heading">
+      <div class="store__media">
+        <picture>
+          <source media="(max-width: 767px)" srcset="./img/store/interior-mobile.jpg" />
+          <img src="./img/store/interior.jpg" alt="아치형 플로어 램프와 벨벳 소파가 있는 Velora 매장 내부" class="store__bg" id="storeBg" />
+        </picture>
+      </div>
+
+      <div class="store__inner">
+
+
+      </div>
+    </section>
+
   </main>
+
+  <footer class="footer">
+    <div class="inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <p class="footer__logo">Velora</p>
+          <address>
+            상호 : 주식회사 벨로라&nbsp;&nbsp;대표 : OOO&nbsp;&nbsp;개인정보 보호 책임자 : OOO<br />
+            TEL : 02-335-4482&nbsp;&nbsp;FAX : 02-335-4483&nbsp;&nbsp;E-Mail : info@velora.com<br />
+            사업자등록번호 : 110-81-81105&nbsp;&nbsp;통신판매업신고번호 : 제 2023-서울마포-1631
+            <a href="#">[사업자정보확인]</a>
+          </address>
+        </div>
+
+        <div class="footer__cs">
+          <p class="footer__cs-label">고객센터</p>
+          <p class="footer__cs-number"><a href="tel:1588-0006">1588-0006</a></p>
+          <p class="footer__cs-hours">평일 09:00 ~ 17:30 (주말 및 공휴일 휴무)<br />점심 12:00 ~ 13:00</p>
+        </div>
+
+        <nav class="footer__links" aria-label="약관 및 안내">
+          <ul>
+            <li><a href="#">브랜드소개</a></li>
+            <li><a href="#">이용약관</a> | <a href="#">이용안내</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__links" aria-label="제휴 및 문의">
+          <ul>
+            <li><a href="#">광고 및 제휴 문의</a></li>
+            <li><a href="#">B2B 구매문의</a></li>
+            <li><a href="#">개인결제창</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">Copyright 2025. velora All Rights Reserved.</p>
+        <ul class="footer__sns">
+          <li><a href="#" aria-label="Velora 인스타그램"><img src="./img/icons/instagram.svg" alt="" /></a></li>
+          <li><a href="#" aria-label="Velora 유튜브"><img src="./img/icons/youtube.svg" alt="" /></a></li>
+          <li><a href="#" aria-label="Velora 블로그"><img src="./img/icons/blog.svg" alt="" /></a></li>
+          <li><a href="#" aria-label="Velora 페이스북"><img src="./img/icons/facebook.svg" alt="" /></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="chat-fab" id="chatFab" aria-label="상담 채팅 열기" aria-describedby="chatFabTip">
+    <img src="./img/icons/chat.svg" alt="" />
+    <span>TALK</span>
+  </button>
+  <p class="chat-fab__tip" id="chatFabTip" role="status" hidden>채팅 상담을 준비 중입니다.</p>
+
+  <button type="button" class="to-top" id="toTop" aria-label="맨 위로 이동" hidden>
+    <img src="./img/icons/chevron-left.svg" alt="" class="to-top__icon" />
+  </button>
+
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
-<!-- 퍼블 준비 중 -->
- <!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>velora 웹디자인 </title>
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/slick.css" />
-  <link rel="stylesheet" href="./css/style.css" />
-
-  <script src="./js/jquery-3.3.1.min.js"></script>
-  <script src="./js/slick.min.js"></script>
-  <script src="./js/script.js"></script>
-</head>
-
-<body>
-
-</body>
-
-</html> -->
