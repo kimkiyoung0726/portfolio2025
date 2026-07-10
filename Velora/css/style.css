@@ -551,13 +551,6 @@ li {
   color: var(--color-text);
 }
 
-.products__empty {
-  text-align: center;
-  color: var(--color-muted);
-  padding: 80px 0;
-  margin-bottom: 64px;
-}
-
 .products__banners {
   display: grid;
   grid-template-columns: 1fr 1fr;
