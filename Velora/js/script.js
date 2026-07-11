@@ -257,6 +257,51 @@ function initStoreCarousel() {
 
   prevBtn.addEventListener('click', () => step(-1));
   nextBtn.addEventListener('click', () => step(1));
+
+  // 마우스/터치로 카드 사진을 좌우로 드래그해도 다음/이전 매장으로 넘어간다.
+  const DRAG_THRESHOLD = 50;
+  let dragging = false;
+  let dragStartX = 0;
+  let dragDelta = 0;
+
+  photoWrap.addEventListener('pointerdown', (e) => {
+    if (animating) return;
+    dragging = true;
+    dragDelta = 0;
+    dragStartX = e.clientX;
+    photoWrap.setPointerCapture(e.pointerId);
+    photoWrap.classList.add('is-dragging');
+    const current = photoWrap.firstElementChild;
+    if (current) current.style.transition = 'none';
+  });
+
+  photoWrap.addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    dragDelta = e.clientX - dragStartX;
+    const current = photoWrap.firstElementChild;
+    if (current) current.style.transform = `translateX(${dragDelta}px)`;
+  });
+
+  function endDrag() {
+    if (!dragging) return;
+    dragging = false;
+    photoWrap.classList.remove('is-dragging');
+
+    const current = photoWrap.firstElementChild;
+    if (current) current.style.transition = '';
+
+    if (Math.abs(dragDelta) > DRAG_THRESHOLD) {
+      if (current) current.style.transform = '';
+      step(dragDelta < 0 ? 1 : -1);
+    } else if (current) {
+      current.style.transform = '';
+    }
+    dragDelta = 0;
+  }
+
+  photoWrap.addEventListener('pointerup', endDrag);
+  photoWrap.addEventListener('pointerleave', endDrag);
+  photoWrap.addEventListener('pointercancel', endDrag);
 }
 
 /* ---------------------------------------------------------------------- */

@@ -850,6 +850,13 @@ li {
   flex: 1;
   border-radius: 12px;
   overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.store__card-photo.is-dragging {
+  cursor: grabbing;
 }
 
 .store__card-photo img {
@@ -859,6 +866,8 @@ li {
   height: 100%;
   object-fit: cover;
   transition: transform 0.45s var(--ease);
+  -webkit-user-drag: none;
+  pointer-events: none;
 }
 
 .store__card-empty {
@@ -1012,8 +1021,8 @@ li {
 }
 
 .footer__sns img {
-  width: 18px;
-  height: 18px;
+  width: 30px;
+  height: 30px;
   transition: transform var(--transition-fast), opacity var(--transition-fast);
 }
 
