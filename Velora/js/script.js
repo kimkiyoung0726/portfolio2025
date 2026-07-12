@@ -209,8 +209,8 @@ function initStoreCarousel() {
   // 매장 배경(store__bg)은 고정, 이 카드 안의 사진만 매장별로 슬라이딩 전환된다.
   const stores = [
     { name: '마포', photo: './img/store/mapo-thumb.jpg', alt: '마포 매장 쇼룸 - 오렌지 암체어와 라탄 콘솔' },
-    { name: '강남', photo: null, alt: '강남 매장 - 오픈 예정' },
-    { name: '잠실', photo: null, alt: '잠실 매장 - 오픈 예정' },
+    { name: '고양', photo: './img/gallery/room-2.jpg', alt: '고양 매장 쇼룸 - 따뜻한 창가 조명 아래 놓인 올리브 컬러 패브릭 소파' },
+    { name: '잠실', photo: './img/gallery/room-5.jpg', alt: '잠실 매장 쇼룸 - 펜던트 조명과 라운드 테이블이 있는 리빙 공간' },
   ];
 
   let current = 0;
