@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>건강웹서비스 기획</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      padding: 0;
+    }
+    a{
+      text-decoration: none;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+    
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    
+    figure {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .eventpage,
+.portfolio-Design{
+  position: fixed;
+  background:#3a3a3a;
+  color: #ffffff;
+  border-radius: 25px;
+  text-align: center;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 15px rgba(53, 35, 1, 0.3);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.eventpage {
+  bottom: 120px;
+  right: 40px;
+}
+
+.portfolio-Design {
+  bottom: 60px;
+  right: 40px;
+}
+.portfolio-Design[data-tooltip]::after,
+.portfolio-Design[data-tooltip]::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  pointer-events: none;
+}
+
+.portfolio-Design[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 14px);
+  right: 0;
+  background: #295D2B;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 6px 16px rgba(53, 35, 1, 0.3);
+  transform: translateY(6px);
+}
+
+.portfolio-Design[data-tooltip]::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 8px);
+  right: 26px;
+  border: 6px solid transparent;
+  border-top-color: #295D2B;
+}
+
+.portfolio-Design[data-tooltip]:hover::after,
+.portfolio-Design[data-tooltip]:hover::before,
+.portfolio-Design[data-tooltip]:focus-visible::after,
+.portfolio-Design[data-tooltip]:focus-visible::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.portfolio-Design[data-tooltip]:hover::after,
+.portfolio-Design[data-tooltip]:focus-visible::after {
+  transform: translateY(0);
+}
+  </style>
+</head>
+
+<body>
+  <main>
+    <figure>
+      <img src="./img/process.jpg" alt="viona-content" />
+    </figure>
+  </main>
+    <a href="https://kimkiyoung0726.github.io/Toyproject/" target="_blank" class="portfolio-Design" data-tooltip="이 퍼블리싱은 codex로 작업했습니다">Publishing View</a>
+</body>
+
+</html>
