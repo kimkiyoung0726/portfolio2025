@@ -1,44 +1,123 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>portfolio</title>
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/slick.css" />
-  <link rel="stylesheet" href="./css/aos.css" />
-  <link rel="stylesheet" href="./css/style.css" />
-
-  <script src="./js/jquery-3.3.1.min.js"></script>
-  <script src="./js/slick.min.js"></script>
-  <script src="./js/aos.js"></script>
-  <script src="./js/script.js"></script>
-
-  <!-- 파비콘 -->
-  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="콘텐츠 디자인, Web 기획, App UIUX 프로젝트를 소개하는 디자인 포트폴리오">
+  <title>Portfolio — 콘텐츠 디자인 · Web · App UIUX</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./img/favicon.ico">
+  <script src="./js/script.js" defer></script>
 </head>
 
 <body>
-    <section class="portfolio" id="portfolio">
-        <!--
-          [유지보수 가이드] 탭(.portfolio-tab)을 추가/삭제할 땐 data-url에
-          해당 프로젝트 상세 페이지 경로를 지정하면 됨. 탭 클릭 시 새 창이 아니라
-          아래 iframe(.portfolio-frame) 안에서 해당 페이지로 바로 전환됨(js/script.js 참고).
-        -->
-        <div class="portfolio-tabs">
-          <button class="portfolio-tab active" type="button" data-url="./DSA/dsa-process-cont.html">DSA 콘텐츠 디자인</button>
-          <button class="portfolio-tab" type="button" data-url="./DSA/dsa-process.html">DSA 학사관리자페이지</button>
-          <button class="portfolio-tab" type="button" data-url="./Burrito/Burrito-process.html">브리또 상세페이지 디자인</button>
-          <button class="portfolio-tab" type="button" data-url="./RIMPET/RIMPET-process.html">동물병원 App UIUX</button>
-          <button class="portfolio-tab" type="button" data-url="https://kimkiyoung0726.github.io/landingpage/">landingpage Design</button>
-          <button class="portfolio-tab" type="button" data-url="./VIONA/viona-process.html">건강 플랫폼 web 기획</button>
-          <button class="portfolio-tab" type="button" data-url="./Velora/velora-process.html">가구 플랫폼 web UIUX</button>
-           <!-- <button class="portfolio-tab" type="button" data-url="./fittory/fittory-process.html">건강식품 사이드프로젝트 웹디자인 </button> -->
-          <!-- <button class="portfolio-tab" type="button" data-url="./Mardi/Mardi-process.html">Mardi Mercredi 콘텐츠 디자인</button> -->
-          <!-- <button class="portfolio-tab active" type="button" data-url="./Covernat/covernat-process.html">Covernat 콘텐츠 디자인</button> -->
-        </div>
-        <iframe class="portfolio-frame" src="./DSA/dsa-process-cont.html" title="프로젝트 상세"></iframe>
+  <a class="skip-link" href="#projects">프로젝트 바로가기</a>
+  <header class="site-header page-width"><a class="wordmark" href="#home" aria-label="포트폴리오 처음으로">PORTFOLIO<span
+        aria-hidden="true">.</span></a><a class="nav-link" href="#projects">프로젝트 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="home">
+    <section class="hero page-width" aria-labelledby="hero-title">
+      <p class="eyebrow intro intro-1"><span class="status-dot" aria-hidden="true"></span>CONTENT DESIGN · WEB · APP
+        UIUX</p>
+      <h1 id="hero-title" class="intro intro-2">콘텐츠에서<br><span class="hero-last">사용자 경험까지<span class="hero-mark"
+            aria-hidden="true">✳</span></span></h1>
+      <div class="hero-bottom intro intro-3">
+        <p>콘텐츠 디자인, 웹 기획, 앱 UIUX.<br>다양한 화면에 담은 디자인 작업을 소개합니다.</p><a class="explore-link" href="#projects">프로젝트 둘러보기
+          <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-rule intro intro-3"><span>DESIGN PORTFOLIO</span><span>SCROLL TO EXPLORE ↓</span></div>
     </section>
+    <section id="projects" class="projects page-width" aria-labelledby="projects-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">PROJECT INDEX / 01—07</p>
+          <h2 id="projects-title">Selected work<span>.</span></h2>
+        </div>
+        <p>콘텐츠 · 플랫폼 · 인터페이스</p>
+      </div>
+      <div class="work-layout reveal">
+        <aside class="preview" aria-label="프로젝트 미리보기">
+          <div class="preview-stage">
+            <img class="preview-image is-visible" src="./img/DSA.jpg" width="960" height="720"
+              alt="DSA 콘텐츠 디자인을 대표하는 데이터 연결망 이미지">
+            <img class="preview-image" width="960" height="720" alt="" hidden>
+            <div class="preview-placeholder" hidden><span>WEB DESIGN</span><strong>Landing<br>page ↗</strong>
+              <p>프로젝트 페이지에서 확인하세요.</p>
+            </div><span class="preview-badge" aria-hidden="true">PROJECT PREVIEW ↗</span>
+          </div>
+          <div class="preview-caption"><span id="preview-title">DSA 콘텐츠 디자인</span><span id="preview-number">01 /
+              07</span></div>
+          <p class="preview-hint">목록에 마우스를 올리거나 키보드로 탐색해 보세요.</p>
+        </aside>
+        <ol class="project-list">
+          <li><a class="project-link is-active" href="./DSA/dsa-process-cont.html" data-preview="./img/DSA.jpg"
+              data-crop="" data-preview-alt="DSA 콘텐츠 디자인을 대표하는 데이터 연결망 이미지"><span class="project-number">01</span>
+              <div class="project-info"><span class="project-category">회사</span>
+                <h3>콘텐츠 디자인</h3>
+              </div><span class="project-arrow" aria-hidden="true">↗</span><img class="mobile-preview"
+                src="./img/DSA.jpg" width="960" height="720" alt="DSA 콘텐츠 디자인을 대표하는 데이터 연결망 이미지" loading="lazy"
+                decoding="async">
+            </a></li>
+          <li><a class="project-link" href="./DSA/dsa-process.html" data-preview="./img/previews/dsa-admin.jpg"><span
+                class="project-number">02</span>
+              <div class="project-info"><span class="project-category">회사</span>
+                <h3>학사관리자페이지</h3>
+              </div><span class="project-arrow" aria-hidden="true">↗</span><img class="mobile-preview"
+                src="./img/previews/dsa-admin.jpg" width="960" height="720" alt="DSA 학사관리자페이지 미리보기" loading="lazy"
+                decoding="async">
+            </a></li>
+          <li><a class="project-link" href="./Burrito/Burrito-process.html" data-preview="./img/previews/burrito-photo.jpg"
+              data-crop="" data-preview-alt="브리또 제품 패키지와 음식 사진"><span class="project-number">03</span>
+              <div class="project-info"><span class="project-category">공모전</span>
+                <h3>브리또 상세페이지 디자인</h3>
+              </div><span class="project-arrow" aria-hidden="true">↗</span><img class="mobile-preview"
+                src="./img/previews/burrito-photo.jpg" width="960" height="720" alt="브리또 제품 패키지와 샐러드, 접시에 담긴 브리또 사진" loading="lazy"
+                decoding="async">
+            </a></li>
+          <li><a class="project-link" href="./RIMPET/RIMPET-process.html"
+              data-preview="./img/previews/rimpet-illustration.png" data-crop=""
+              data-preview-alt="푸른 하늘과 잔디밭에서 함께 쉬는 보호자와 강아지, 고양이"><span class="project-number">04</span>
+              <div class="project-info"><span class="project-category">공모전</span>
+                <h3>동물병원 App UIUX</h3>
+              </div><span class="project-arrow" aria-hidden="true">↗</span><img class="mobile-preview"
+                src="./img/previews/rimpet-illustration.png" width="960" height="720"
+                alt="푸른 하늘과 잔디밭에서 함께 쉬는 보호자와 강아지, 고양이" loading="lazy" decoding="async">
+            </a></li>
+          <li><a class="project-link" href="https://kimkiyoung0726.github.io/landingpage/"
+              data-preview="https://images.unsplash.com/photo-1725263559488-2c1cc74f9bb2?auto=format&amp;fit=crop&amp;w=960&amp;q=80"
+              data-preview-alt="WANDER 오키나와 여행 랜딩페이지의 바다와 해안 풍경"><span class="project-number">05</span>
+              <div class="project-info"><span class="project-category">개인 프로젝트</span>
+                <h3>랜딩페이지 디자인</h3>
+              </div><span class="project-arrow" aria-hidden="true">↗</span>
+              <span class="mobile-thumbnail"><img class="mobile-preview"
+                  src="https://images.unsplash.com/photo-1725263559488-2c1cc74f9bb2?auto=format&amp;fit=crop&amp;w=960&amp;q=80"
+                  alt="WANDER 오키나와 여행 랜딩페이지의 바다와 해안 풍경" width="960" height="530" loading="lazy" decoding="async"
+                  referrerpolicy="no-referrer"></span>
+            </a></li>
+          <li><a class="project-link" href="./VIONA/viona-process.html" data-preview="./VIONA/img/process.jpg"
+              data-crop="viona" data-preview-alt="VIONA 건강 플랫폼의 제품과 식물 이미지"><span class="project-number">06</span>
+              <div class="project-info"><span class="project-category">개인 프로젝트</span>
+                <h3>건강 플랫폼 web 기획</h3>
+              </div><span class="project-arrow" aria-hidden="true">↗</span><img class="mobile-preview"
+                src="./VIONA/img/process.jpg" width="960" height="720" alt="건강 플랫폼 web 기획 미리보기" loading="lazy"
+                decoding="async">
+            </a></li>
+          <li><a class="project-link" href="./Velora/velora-process.html"
+              data-preview="./Velora/img/hero/living-room.jpg" data-crop=""
+              data-preview-alt="Velora 가구와 식물로 구성된 거실 이미지"><span class="project-number">07</span>
+              <div class="project-info"><span class="project-category">개인 프로젝트</span>
+                <h3>가구 플랫폼 web UIUX</h3>
+              </div><span class="project-arrow" aria-hidden="true">↗</span><img class="mobile-preview"
+                src="./Velora/img/hero/living-room.jpg" width="960" height="720" alt="가구 플랫폼 web UIUX 미리보기"
+                loading="lazy" decoding="async">
+            </a></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer page-width"><span>PORTFOLIO / CONTENT · WEB · APP</span><a href="#home">맨 위로 <span
+        aria-hidden="true">↑</span></a></footer>
 </body>
+
 </html>
