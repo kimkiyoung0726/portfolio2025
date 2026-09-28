@@ -177,6 +177,17 @@ a:focus-visible {
   gap:64px;
   align-items:start
 }
+.project-note {
+  margin:20px 0 0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.7;
+  word-break:keep-all;
+  overflow-wrap:break-word;
+}
+.project-note-desktop {
+  display:none;
+}
 .preview {
   position:sticky;
   top:36px;
@@ -381,6 +392,15 @@ a:focus-visible {
 }
 .reveal {
   transition:opacity .6s ease,transform .6s ease
+}
+@media(min-width:1001px) and (hover:hover) {
+  .projects > .project-note {
+    display:none;
+  }
+  .project-note-desktop {
+    display:block;
+    margin-top:12px;
+  }
 }
 @media(min-width:1600px) {
   .hero {
