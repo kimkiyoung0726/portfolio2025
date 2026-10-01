@@ -34,6 +34,7 @@
     placeholder.hidden = Boolean(source);
     links.forEach(item => item.classList.toggle('is-active', item === link));
     document.querySelector('#preview-title').textContent = link.querySelector('h3').textContent;
+    document.querySelector('.project-note-desktop').hidden = !link.hasAttribute('data-project-note');
     document.querySelector('#preview-number').textContent = `${String(index + 1).padStart(2, '0')} / 07`;
   }
   links.forEach((link, index) => {

@@ -185,7 +185,8 @@ a:focus-visible {
   word-break:keep-all;
   overflow-wrap:break-word;
 }
-.project-note-desktop {
+.project-note-desktop,
+.project-note-mobile {
   display:none;
 }
 .preview {
@@ -307,6 +308,12 @@ a:focus-visible {
   letter-spacing:1.15px;
   color:var(--muted)
 }
+.project-subtitle {
+  margin:6px 0 0;
+  font-size:13px;
+  line-height:1.6;
+  color:var(--muted)
+}
 .project-info h3 {
   font-size:clamp(16px,1.5vw,23px);
   font-weight:500;
@@ -393,11 +400,8 @@ a:focus-visible {
 .reveal {
   transition:opacity .6s ease,transform .6s ease
 }
-@media(min-width:1001px) and (hover:hover) {
-  .projects > .project-note {
-    display:none;
-  }
-  .project-note-desktop {
+@media(min-width:761px) and (hover:hover) {
+  .project-note-desktop:not([hidden]) {
     display:block;
     margin-top:12px;
   }
@@ -425,6 +429,11 @@ a:focus-visible {
   }
 }
 @media(max-width:760px),(hover:none) {
+  .project-note-mobile {
+    display:block;
+    grid-column:1/-1;
+    margin-top:12px;
+  }
   .preview {
     display:none
   }
